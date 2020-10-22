@@ -7,14 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    @if ($operator == 'addition')
-        {{$num1}} + {{$num2}} = {{$num1 + $num2}}
-    @elseif ($operator == 'subtraction')
-        {{$num1}} - {{$num2}} = {{$num1 - $num2}}
-    @elseif ($operator == 'multiplication')
-        {{$num1}} * {{$num2}} = {{$num1 * $num2}}
-    @elseif ($operator == 'division')
-        {{$num1}} / {{$num2}} = {{$num1 / $num2}}
-    @endif
+    @php
+        if ($operator == 'addition') {
+            $add = $num1 + $num2;
+            echo $num1 . ' + ' . $num2 . ' = ' . $add;
+        }
+        elseif ($operator == 'subtraction') {
+            $sub = $num1 - $num2;
+            echo $num1 . ' - ' . $num2 . ' = ' . $sub;
+        }
+        elseif ($operator == 'multiplication') {
+            $mul = $num1 * $num2;
+            echo $num1 . ' * ' . $num2 . ' = ' . $mul;
+        }
+        elseif ($operator == 'division') {
+            $div = $num1 / $num2;
+            echo $num1 . ' / ' . $num2 . ' = ' . $div;
+        }
+    @endphp
 </body>
 </html>
